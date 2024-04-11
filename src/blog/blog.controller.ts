@@ -17,6 +17,7 @@ export class BlogController {
 
     @Get('list')
     async findAll(): Promise<BlogResponse<Blog[]>> {
+        console.info('有人请求blog/list接口了')
         return {
             code: 200,
             data: await this.blogService.findAll(),
